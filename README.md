@@ -1,5 +1,7 @@
 # CardSync
 
+Working video: [https://www.loom.com/share/29c6af13a7b3419eaebdcd1f955daabc?sid=f87cb6e4-65f7-455e-8445-a154de72d9c5](https://www.loom.com/share/29c6af13a7b3419eaebdcd1f955daabc?sid=f87cb6e4-65f7-455e-8445-a154de72d9c5)
+
 ## Thought Process and Setup
 
 ### 1. [Client](client/README.md)
