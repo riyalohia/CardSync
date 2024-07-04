@@ -20,6 +20,19 @@ To run the backend:
 docker-compose up --build
 ```
 
+5. If you encounter an error that port 5432 is already in use, run:
+```bash
+sudo lsof -i :5432
+```
+This will give the `pid`, now run:
+```bash
+sudo kill -9 <pid>
+```
+This will kill the process running on port. Now again try running:
+```bash
+docker-compose up --build
+```
+
 ## Thought Process
 
 #### Initial Setup and Framework Selection
