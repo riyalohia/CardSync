@@ -1,46 +1,33 @@
-# Getting Started with Create React App
+# Card Sync Client
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Setup
 
-## Available Scripts
+To run the frontend:
 
-In the project directory, you can run:
+1. Navigate to client
+  ```bash
+  cd client
+  ```
+2. Create a .env file
+  ```bash
+  BACKEND_URL = 'http://127.0.0.1:8000' // This points to the server
+  ```
+3. Install dependencies and run the server
+```bash
+npm install
+npm run start
+```
 
-### `npm start`
+## Thought process
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### Initial Setup and Component Structure
+I started by setting up a basic React application using Create React App. The component structure was designed to be modular, with separate components for the main application logic (App.tsx) and individual card elements (Card.tsx). This approach ensures maintainability and scalability.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### State Management and Drag-and-Drop Logic
+State management was handled using React's useState hook for managing card states, loading, saving state, and the last save time. I implemented drag-and-drop manually to keep the app lightweight and customized. The drag-and-drop handlers were implemented to handle reordering and state updates efficiently.
 
-### `npm test`
+#### Periodic Saving and User Feedback
+I implemented an auto-save feature that saves changes every five seconds if modifications are detected, using the useEffect hook. A ref (hasChanges) tracks changes to prevent unnecessary API calls. A loading spinner indicates when data is being saved, and the time since the last save is displayed for user feedback.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### TypeScript Integration for Robustness
+Integrating TypeScript improved code robustness and maintainability. This provides better documentation and makes the code easier to understand and maintain.
