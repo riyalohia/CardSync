@@ -4,7 +4,7 @@
 
 ### 1. [Client](client/README.md)
 
-### 2. [Server](server/README.md)
+### 2. [Server](server/Readme.md)
 
 ### 3. Deployment
 
