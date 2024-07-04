@@ -10,7 +10,7 @@ To run the frontend:
   ```
 2. Create a .env file
   ```bash
-  BACKEND_URL = 'http://127.0.0.1:8000' // This points to the server
+  REACT_APP_BACKEND_URL = 'http://127.0.0.1:8000' // This points to the server
   ```
 3. Install dependencies and run the server
 ```bash
